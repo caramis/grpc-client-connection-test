@@ -1,0 +1,28 @@
+[persistent]
+[persistent.basic]
+dbname = "dbname"
+driver = "myrdbms"
+hostname = "localhost"
+password = "password"
+port = 65535
+ssl = false
+user = "user"
+[persistent.advanced]
+connection_max_idle_time = "0s"
+connection_max_lifetime = "30m"
+max_idle_connections = 5
+max_open_connections = 10
+
+[ftp]
+hostname = "localhost"
+password = "password"
+port = 21
+timeout = "5s"
+user = "user"
+
+[grpc]
+[grpc.server]
+listen_port = 9090
+[grpc.client]
+connection_target = ":9090"
+timeout = "5s"

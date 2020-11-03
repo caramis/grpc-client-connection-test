@@ -1,0 +1,17 @@
+syntax = "proto3";
+
+option go_package = "github.com/iamport/iamport-base/test_supplements/gen_src/test";
+
+service TestService {
+    rpc Add(Request) returns (Response);
+}
+
+message Request {
+    int32 number1 = 1;
+    int32 number2 = 2;
+}
+
+message Response {
+    int32 code = 1;
+    int32 result = 2;
+}

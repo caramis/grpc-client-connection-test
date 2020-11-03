@@ -1,0 +1,28 @@
+[persistent]
+[persistent.basic]
+dbname = "unit-test"
+driver = "mysql"
+hostname = "iamport-unit-test.cvig1uayvhfo.ap-northeast-2.rds.amazonaws.com"
+password = "$UNITTEST_DBMS_PASSWORD"
+port = 3306
+ssl = false
+user = "$UNITTEST_DBMS_USER"
+[persistent.advanced]
+connection_max_idle_time = "0s"
+connection_max_lifetime = "30m"
+max_idle_connections = 5
+max_open_connections = 10
+
+[ftp]
+hostname = "localhost"
+password = "anonymous"
+port = 21
+timeout = "5s"
+user = "anonymous"
+
+[grpc]
+[grpc.server]
+listen_port = 9090
+[grpc.client]
+connection_target = ":9090"
+timeout = "5s"
